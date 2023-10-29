@@ -1,9 +1,18 @@
-import './App.css'
+import { ThemeProvider } from 'styled-components'
 
-function App() {
+import { GlobalStyle } from './styles/global'
+import { Router } from './Router'
+import { BrowserRouter } from 'react-router-dom'
+import { defaultTheme } from './styles/theme/defalt'
+
+export function App() {
   return (
-    <h1>Cafeteria</h1>
+    <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router />
+        <GlobalStyle />
+      </BrowserRouter>
+    </ThemeProvider>
+
   )
 }
-
-export default App
