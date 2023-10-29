@@ -13,7 +13,15 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     background: ${(props) => props.theme['pbackground']};
-    color: ${(props) => props.theme['']};
-
+    color: ${(props) => props.theme['base-title']};
+    -webkit-font-smoothing: antialiased;
+  }
+  body, input, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  input {
+    color: ${(props) => props.theme['base-input']};
   }
 `
